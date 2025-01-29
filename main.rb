@@ -10,7 +10,7 @@ def stock_picker(prices)
   prices.each_with_index do |numi, i|   #iterate thru all prices
     prices[i+1..-1].each_with_index do |numj, j|    #keep track of new sliced array
       dif = numj - numi   #variable to store current dif (profit)
-      if dif > difmax
+      if dif > difmax   #check for max profit
         difmax = dif
         best_days = [i, i+1+j]    #best days to buy/sell, cant use simple j here for sell index, you need to map j to the original array
       end
