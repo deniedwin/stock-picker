@@ -5,17 +5,10 @@
 # => [1,4]  # for a profit of $15 - $3 == $12
 
 def stock_picker(prices)
-  # prices.each do |i|
-  #   prices.each do |j|
-  #     print i, j, " "
-  #   end
-  #   print "\n"
-  # end
-  for i in prices
-    for j in prices
-      print i, "-", j, " "
+  prices.each_with_index do |numi, i|
+    prices[i+1..-1].each do |numj|
+      puts "#{numi}, #{numj}"
     end
-    print "\n"
   end
 end
 
